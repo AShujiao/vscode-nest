@@ -30,7 +30,7 @@
 -----------------------------------------------------------------------------------------------------------
 ### 感谢
 	没有这些开源项目，就不会有这个插件的出现
-* [Canvas-nest.js](https://github.com/AShujiao/vscode-maxPlus)
+* [Canvas-nest.js](https://github.com/hustcc/canvas-nest.js)
 * [vscode-background](https://github.com/shalldie/vscode-background)
 
 ### 相关信息
