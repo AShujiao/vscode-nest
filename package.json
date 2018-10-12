@@ -1,0 +1,86 @@
+{
+    "name": "nest",
+    "displayName": "nest",
+    "description": "一个非常好看的网页粒子背景插件，来自Canvas-nest.js",
+    "version": "0.1.0",
+    "publisher": "manasxx",
+    "engines": {
+        "vscode": "^1.28.0"
+    },
+    "icon": "resources/nest.png",
+    "categories": [
+        "Other"
+    ],
+    "keywords": [
+        "background",
+        "canvas",
+        "nest",
+        "mouse",
+        "particles"
+    ],
+    "activationEvents": [
+        "*"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.nest",
+                "title": "Hello nest"
+            }
+        ],
+        "configuration": {
+            "title": "nest config. nest 插件配置",
+            "properties": {
+                "nest.enabled": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "插件是否启用"
+                },
+                "nest.opacity": {
+                    "type": "number",
+                    "maximum": 1,
+                    "minimum": 0.1,
+                    "default": 0.5,
+                    "description": "透明度0.1-1"
+                },
+                "nest.count": {
+                    "type": "integer",
+                    "maximum": 100,
+                    "minimum": 1,
+                    "default": 60,
+                    "description": "线条数量1-100"
+                },
+                "nest.color": {
+                    "type": "string",
+                    "enum": [
+                        "White",
+                        "Black",
+                        "Red",
+                        "Blue",
+                        "Yellow",
+                        "Green",
+                        "Orange",
+                        "Pink",
+                        "Purple"
+                    ],
+                    "default": "White",
+                    "description": "线条颜色"
+                }
+            }
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42"
+    }
+}
