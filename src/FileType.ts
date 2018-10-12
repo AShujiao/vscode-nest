@@ -1,14 +1,14 @@
 enum FileType {
     /**
-     * 未修改的css文件
+     * 未修改的文件
      */
     empty,
     /**
-     * hack 过的旧版本css文件
+     * hack 过的旧版本文件
      */
     isOld,
     /**
-     * hack 过的新版本的css文件
+     * hack 过的新版本的文件
      */
     isNew
 }

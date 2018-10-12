@@ -4,6 +4,7 @@ import FileType from './FileType';
 import * as vscode from 'vscode';
 import vsHelp from './vsHelp';
 import getNewContent from './getJs';
+
 export class Dom {
     //当前用户配置
     private config: any;
@@ -72,7 +73,7 @@ export class Dom {
         // 4.如果关闭插件
         if (!config.enabled) {
             this.uninstall();
-            vsHelp.showInfoRestart(this.extName + ' has been uninstalled! Please restart.');
+            vsHelp.showInfoRestart(this.extName + '已关闭插件，请重新启动！');
             return;
         }
 
@@ -81,13 +82,13 @@ export class Dom {
         // 自定义的样式内容
         let content = getNewContent(config, this.extName,this.version).replace(/\s*$/, ''); // 去除末尾空白
 
-        // 添加到原有样式(尝试删除旧样式)中
+        // 添加代码到文件中，并尝试删除原来已经添加的
         let newContent = this.getContent();
         newContent = this.clearCssContent(newContent);
         newContent += content;
 
         this.saveContent(newContent);
-        vsHelp.showInfoRestart(this.extName + ' has been changed! Please restart.');
+        vsHelp.showInfoRestart(this.extName + ' 已更新配置，请重新启动！');
 
     }
 
@@ -101,22 +102,20 @@ export class Dom {
     }
 
     /**
-     * 设置 css 文件内容
+     * 设置文件内容
      * 
      * @private
      * @param {string} content 
-     * @memberof Background
      */
     private saveContent(content: string): void {
         fs.writeFileSync(this.filePath, content, 'utf-8');
     }
     /**
-     * 清理css中的添加项
+     * 清理已经添加的代码
      * 
      * @private
      * @param {string} content 
      * @returns {string} 
-     * @memberof Background
      */
     private clearCssContent(content: string): string {
         var re =new RegExp("\\/\\*ext-" + this.extName + "-start\\*\\/[\\s\\S]*?\\/\\*ext-" + this.extName + "-end\\*"+"\\/","g"); 
@@ -129,7 +128,6 @@ export class Dom {
      * 卸载
      * 
      * @private
-     * @memberof Background
      */
     private uninstall(): boolean {
         try {
@@ -156,7 +154,7 @@ export class Dom {
 
         if (info.firstload) {
             // 提示
-            vsHelp.showInfo('Welcome to use ' + this.extName + '! U can config it in settings.json.')
+            vsHelp.showInfo('插件： ' + this.extName + '已启动! ')
             // 标识插件已启动过
             info.firstload = false;
             fs.writeFileSync(configPath, JSON.stringify(info, null, '    '), 'utf-8');
@@ -168,11 +166,10 @@ export class Dom {
     }
 
     /**
- * 获取css文件状态
+ * 获取文件状态
  * 
  * @private
  * @returns {FileType} 
- * @memberof Background
  */
     private getFileType(): FileType {
         let cssContent = this.getContent();
@@ -188,7 +185,6 @@ export class Dom {
         let ifVerOld: boolean = !~cssContent.indexOf(`/*ext.${this.extName}.ver.${this.version}*/`);
 
         if (ifVerOld) {
-            //fs.writeFileSync(path.join(__dirname, '../xxx.css'), cssContent, 'utf-8');
             return FileType.isOld;
         }
 

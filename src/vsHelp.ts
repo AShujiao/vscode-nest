@@ -18,7 +18,7 @@ const vsHelp = {
      * @returns {Thenable<void>} 
      */
     showInfoRestart(content:any): Thenable<void> {
-        return vscode.window.showInformationMessage(content, { title: "Restart vscode" })
+        return vscode.window.showInformationMessage(content, { title: "重新加载" })
             .then(function (item) {
                 if (!item) return;
                 vscode.commands.executeCommand('workbench.action.reloadWindow');

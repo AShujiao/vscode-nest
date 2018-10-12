@@ -1,7 +1,2 @@
-# Change Log
-All notable changes to the "dandelion" extension will be documented in this file.
-
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
-## [Unreleased]
-- Initial release
+#### ver 0.1.0 (2018/10/12)
+	第一版发布

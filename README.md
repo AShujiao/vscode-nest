@@ -4,8 +4,7 @@
 
 ## 特征
 
-![效果](https://user-images.githubusercontent.com/14969576/45882721-959a2a80-bde1-11e8-81c3-af68af1a95af.gif)
-![效果](https://user-images.githubusercontent.com/14969576/45882923-32f55e80-bde2-11e8-930b-0afd8fd60910.png)
+![效果](https://user-images.githubusercontent.com/14969576/46869498-a416b780-ce5e-11e8-9e14-e5ce925cbc25.gif)
 
 ## 要求
 
@@ -29,7 +28,10 @@
 #### ver 0.1.0 (2018/10/12)
 	第一版发布
 -----------------------------------------------------------------------------------------------------------
-
+### 感谢
+	没有这些开源项目，就不会有这个插件的出现
+* [Canvas-nest.js](https://github.com/AShujiao/vscode-maxPlus)
+* [vscode-background](https://github.com/shalldie/vscode-background)
 
 ### 相关信息
 
