@@ -11,6 +11,6 @@ export class Main{
 		const filePath = path.join(base, 'vs','code','electron-browser', 'workbench', 'workbench.js');
 		const extName = "nest";
 		let DomApi = new Dom(extName,filePath,version,extName);
-		return vscode.workspace.onDidChangeConfiguration(() => DomApi.install(true));
+		return vscode.workspace.onDidChangeConfiguration(() => DomApi.install());
 	}
 }
