@@ -37,6 +37,6 @@
 
 ### 相关信息
 
-* [GitHub](https://github.com/AShujiao/vscode-maxPlus)
+* [GitHub](https://github.com/AShujiao/vscode-nest)
 
 **Enjoy!**
