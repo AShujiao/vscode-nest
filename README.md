@@ -38,5 +38,6 @@
 ### 相关信息
 
 * [GitHub](https://github.com/AShujiao/vscode-nest)
+* [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=manasxx.nest)
 
 **Enjoy!**
