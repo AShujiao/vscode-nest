@@ -2,7 +2,7 @@
     "name": "nest",
     "displayName": "nest",
     "description": "一个非常好看的网页粒子背景插件，来自Canvas-nest.js",
-    "version": "0.2.2",
+    "version": "0.2.3",
     "publisher": "manasxx",
     "engines": {
         "vscode": "^1.71.0"
