@@ -1,10 +1,16 @@
+/*
+ * @Description: 
+ * @Author: czw
+ * @Date: 2022-01-27 09:30:32
+ * @FilePath: \vscode-nest\src\uninstall.ts
+ */
 
 import * as path from 'path';
 import * as fs from 'fs';
 
 const base = process.cwd();
 // 文件路径
-const filePath = path.join( base, 'resources', 'app', 'out', 'vs', 'code', 'electron-browser', 'workbench', 'workbench.js' );
+const filePath = path.join( base, 'resources', 'app', 'out', 'vs', 'workbench', 'workbench.desktop.main.js' );
 const extName = "nest";
 
 //执行清理

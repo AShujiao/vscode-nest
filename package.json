@@ -2,10 +2,10 @@
     "name": "nest",
     "displayName": "nest",
     "description": "一个非常好看的网页粒子背景插件，来自Canvas-nest.js",
-    "version": "0.2.0",
+    "version": "0.2.2",
     "publisher": "manasxx",
     "engines": {
-        "vscode": "^1.28.0"
+        "vscode": "^1.71.0"
     },
     "icon": "resources/nest.png",
     "categories": [
@@ -80,7 +80,7 @@
     },
     "homepage": "https://github.com/AShujiao/vscode-nest/blob/master/README.md",
     "scripts": {
-        "vscode:prepublish": "npm run compile",
+        "vscode:prepublish": "",
         "vscode:uninstall": "node ./out/uninstall",
         "compile": "tsc -p ./",
         "watch": "tsc -watch -p ./",
@@ -89,7 +89,7 @@
     },
     "devDependencies": {
         "@types/mocha": "^2.2.42",
-        "@types/node": "^7.10.2",
+        "@types/node": "^7.10.14",
         "typescript": "^2.6.1",
         "vscode": "^1.1.26"
     }
