@@ -1,4 +1,6 @@
 
+<span style="color:red;">该扩展已停止维护，已集成到[vscode-background-cover](https://github.com/AShujiao/vscode-background-cover)中，欢迎使用</span>
+
 # canvas-nest for  VsCode
 
 一个非常好看的网页粒子背景插件，来自[Canvas-nest.js](https://github.com/hustcc/canvas-nest.js).
@@ -22,8 +24,6 @@
 |`nest.count`| 线条数量，范围1 - 100 
 |`nest.color`| 线条颜色
 
-
-
 ## 发行说明
 
 #### ver 0.1.0 (2018/10/12)
@@ -46,3 +46,4 @@
 * [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=manasxx.nest)
 
 **Enjoy!**
+
